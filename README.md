@@ -25,3 +25,4 @@ YJPieChart *pieChart = [YJPieChart new];
 pieChart.frame = CGRectMake(0, 350, self.view.frame.size.width, 300);
 [pieChart setValueWithArray:@[@"1", @"2", @"4"]];
 ```
+<img src ="https://github.com/yuejieee/YJChart/blob/master/%E9%A5%BC%E7%8A%B6%E5%9B%BE.png" width=400/>

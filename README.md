@@ -1,6 +1,6 @@
 # YJChart
 <div align="left">
-<img src="https://github.com/yuejieee/YJChart/blob/master/%E6%95%88%E6%9E%9C%E5%9B%BE.png" width=400 />
+<img src="https://github.com/yuejieee/YJChart/blob/master/%E6%8A%98%E7%BA%BF%E5%9B%BE.png" width=400 />
 </div>
 
 <div align="right">

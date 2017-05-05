@@ -3,7 +3,7 @@
 <img src="https://github.com/yuejieee/YJChart/blob/master/%E6%95%88%E6%9E%9C%E5%9B%BE.png" width=400 />
 </div>
 <div align="right">
-<img scr="" width=400 />
+<img scr="https://github.com/yuejieee/YJChart/blob/master/%E9%A5%BC%E7%8A%B6%E5%9B%BE.png" width=400 />
 </div>
 ## Description
 基于UIBezierPath的一个图表的封装，目前仅仅加入了折线图，以后有时间会陆续加上饼状图和柱状图。

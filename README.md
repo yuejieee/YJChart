@@ -2,6 +2,7 @@
 <div align="left">
 <img src="https://github.com/yuejieee/YJChart/blob/master/%E6%95%88%E6%9E%9C%E5%9B%BE.png" width=400 />
 </div>
+
 <div align="right">
 <img scr="https://github.com/yuejieee/YJChart/blob/master/%E9%A5%BC%E7%8A%B6%E5%9B%BE.png" width=400 />
 </div>
@@ -26,7 +27,7 @@ lineChart.frame = CGRectMake(0, 50, self.view.frame.size.width, 300);
 #import YJPieChart
 
 YJPieChart *pieChart = [YJPieChart new];
-    [self.view addSubview:pieChart];
-    pieChart.frame = CGRectMake(0, 350, self.view.frame.size.width, 300);
-    [pieChart setValueWithArray:@[@"1", @"2", @"4"]];
+[self.view addSubview:pieChart];
+pieChart.frame = CGRectMake(0, 350, self.view.frame.size.width, 300);
+[pieChart setValueWithArray:@[@"1", @"2", @"4"]];
 ```

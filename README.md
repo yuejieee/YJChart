@@ -1,7 +1,6 @@
 # YJChart
-<div align="left">
+<div align="center">
 <img src="https://github.com/yuejieee/YJChart/blob/master/%E6%8A%98%E7%BA%BF%E5%9B%BE.png" width=350/>
-<div align="right">
 <img src ="https://github.com/yuejieee/YJChart/blob/master/%E9%A5%BC%E7%8A%B6%E5%9B%BE.png" width=350/>
 </div>
 

@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F58F1481EBC165500381904 /* YJPieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F58F1471EBC165500381904 /* YJPieChart.m */; };
+		9F58F14E1EBC5C2200381904 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F58F14B1EBC5C2200381904 /* AppDelegate.m */; };
+		9F58F14F1EBC5C2200381904 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F58F14D1EBC5C2200381904 /* ViewController.m */; };
 		9F6AC4B51EA5AE31006FBDD7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F6AC4B41EA5AE31006FBDD7 /* main.m */; };
-		9F6AC4B81EA5AE31006FBDD7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F6AC4B71EA5AE31006FBDD7 /* AppDelegate.m */; };
-		9F6AC4BB1EA5AE31006FBDD7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F6AC4BA1EA5AE31006FBDD7 /* ViewController.m */; };
 		9F6AC4BE1EA5AE31006FBDD7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F6AC4BC1EA5AE31006FBDD7 /* Main.storyboard */; };
 		9F6AC4C01EA5AE31006FBDD7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F6AC4BF1EA5AE31006FBDD7 /* Assets.xcassets */; };
 		9F6AC4C31EA5AE31006FBDD7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F6AC4C11EA5AE31006FBDD7 /* LaunchScreen.storyboard */; };
@@ -17,12 +18,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9F58F1461EBC165500381904 /* YJPieChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJPieChart.h; sourceTree = "<group>"; };
+		9F58F1471EBC165500381904 /* YJPieChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJPieChart.m; sourceTree = "<group>"; };
+		9F58F14A1EBC5C2200381904 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		9F58F14B1EBC5C2200381904 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		9F58F14C1EBC5C2200381904 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		9F58F14D1EBC5C2200381904 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		9F6AC4B01EA5AE31006FBDD7 /* YJChart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YJChart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F6AC4B41EA5AE31006FBDD7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		9F6AC4B61EA5AE31006FBDD7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		9F6AC4B71EA5AE31006FBDD7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		9F6AC4B91EA5AE31006FBDD7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		9F6AC4BA1EA5AE31006FBDD7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		9F6AC4BD1EA5AE31006FBDD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9F6AC4BF1EA5AE31006FBDD7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F6AC4C21EA5AE31006FBDD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -42,6 +45,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9F58F1491EBC5C2200381904 /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				9F58F14A1EBC5C2200381904 /* AppDelegate.h */,
+				9F58F14B1EBC5C2200381904 /* AppDelegate.m */,
+				9F58F14C1EBC5C2200381904 /* ViewController.h */,
+				9F58F14D1EBC5C2200381904 /* ViewController.m */,
+			);
+			path = Example;
+			sourceTree = "<group>";
+		};
 		9F6AC4A71EA5AE31006FBDD7 = {
 			isa = PBXGroup;
 			children = (
@@ -61,15 +75,8 @@
 		9F6AC4B21EA5AE31006FBDD7 /* YJChart */ = {
 			isa = PBXGroup;
 			children = (
+				9F58F1491EBC5C2200381904 /* Example */,
 				9F6AC4CA1EA5AE4B006FBDD7 /* YJChart */,
-				9F6AC4B61EA5AE31006FBDD7 /* AppDelegate.h */,
-				9F6AC4B71EA5AE31006FBDD7 /* AppDelegate.m */,
-				9F6AC4B91EA5AE31006FBDD7 /* ViewController.h */,
-				9F6AC4BA1EA5AE31006FBDD7 /* ViewController.m */,
-				9F6AC4BC1EA5AE31006FBDD7 /* Main.storyboard */,
-				9F6AC4BF1EA5AE31006FBDD7 /* Assets.xcassets */,
-				9F6AC4C11EA5AE31006FBDD7 /* LaunchScreen.storyboard */,
-				9F6AC4C41EA5AE31006FBDD7 /* Info.plist */,
 				9F6AC4B31EA5AE31006FBDD7 /* Supporting Files */,
 			);
 			path = YJChart;
@@ -79,6 +86,10 @@
 			isa = PBXGroup;
 			children = (
 				9F6AC4B41EA5AE31006FBDD7 /* main.m */,
+				9F6AC4BC1EA5AE31006FBDD7 /* Main.storyboard */,
+				9F6AC4BF1EA5AE31006FBDD7 /* Assets.xcassets */,
+				9F6AC4C11EA5AE31006FBDD7 /* LaunchScreen.storyboard */,
+				9F6AC4C41EA5AE31006FBDD7 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -88,6 +99,8 @@
 			children = (
 				9F6AC4CB1EA5AE91006FBDD7 /* YJLineChart.h */,
 				9F6AC4CC1EA5AE91006FBDD7 /* YJLineChart.m */,
+				9F58F1461EBC165500381904 /* YJPieChart.h */,
+				9F58F1471EBC165500381904 /* YJPieChart.m */,
 			);
 			path = YJChart;
 			sourceTree = "<group>";
@@ -163,10 +176,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F6AC4BB1EA5AE31006FBDD7 /* ViewController.m in Sources */,
+				9F58F14E1EBC5C2200381904 /* AppDelegate.m in Sources */,
+				9F58F1481EBC165500381904 /* YJPieChart.m in Sources */,
 				9F6AC4CD1EA5AE91006FBDD7 /* YJLineChart.m in Sources */,
-				9F6AC4B81EA5AE31006FBDD7 /* AppDelegate.m in Sources */,
 				9F6AC4B51EA5AE31006FBDD7 /* main.m in Sources */,
+				9F58F14F1EBC5C2200381904 /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,6 +337,7 @@
 				9F6AC4C91EA5AE31006FBDD7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

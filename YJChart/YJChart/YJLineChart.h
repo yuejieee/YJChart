@@ -10,9 +10,9 @@
 
 @interface YJLineChart : UIView
 
-- (void)setXLabels:(NSArray *)array;
+- (void)setXValuesWithArray:(NSArray *)array;
 
-- (void)setYLabels:(NSArray *)array;
+- (void)setYValuesWithArray:(NSArray *)array;
 
 - (void)setDataArray:(NSArray *)array;
 

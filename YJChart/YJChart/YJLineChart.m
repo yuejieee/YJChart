@@ -31,7 +31,7 @@
     return self;
 }
 
-- (void)setXLabels:(NSArray *)array {
+- (void)setXValuesWithArray:(NSArray *)array {
     CGFloat labelWidth = (self.bounds.size.width - bounceX * 2) / array.count;
     for (NSInteger i = 0; i < array.count; i++) {
         UILabel *label = [UILabel new];
@@ -46,7 +46,7 @@
     }
 }
 
-- (void)setYLabels:(NSArray *)array {
+- (void)setYValuesWithArray:(NSArray *)array {
     CGFloat yLineHeight = self.bounds.size.height - bounceY * 2;
     CGFloat labelHeight = yLineHeight / array.count;
     for (NSInteger i = 0; i < array.count; i++) {

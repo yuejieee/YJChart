@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "YJLineChart.h"
+#import "YJPieChart.h"
 
 @interface ViewController ()
 
@@ -21,9 +22,14 @@
     YJLineChart *lineChart = [YJLineChart new];
     [self.view addSubview:lineChart];
     lineChart.frame = CGRectMake(0, 50, self.view.frame.size.width, 300);
-    [lineChart setYLabels:@[@"50", @"100", @"150", @"200", @"250", @"300", @"350", @"400"]];
-    [lineChart setXLabels:@[@"1月", @"2月", @"3月", @"4月", @"5月", @"6月", @"7月", @"8月", @"9月", @"10月", @"11月", @"12月"]];
+    [lineChart setYValuesWithArray:@[@"50", @"100", @"150", @"200", @"250", @"300", @"350", @"400"]];
+    [lineChart setXValuesWithArray:@[@"1月", @"2月", @"3月", @"4月", @"5月", @"6月", @"7月", @"8月", @"9月", @"10月", @"11月", @"12月"]];
     [lineChart setDataArray:@[@"120", @"240", @"230", @"190", @"150", @"200", @"230", @"400", @"350", @"340", @"360", @"330"]];
+    
+    YJPieChart *pieChart = [YJPieChart new];
+    [self.view addSubview:pieChart];
+    pieChart.frame = CGRectMake(0, 350, self.view.frame.size.width, 300);
+    [pieChart setValueWithArray:@[@"1", @"2", @"4"]];
 }
 
 

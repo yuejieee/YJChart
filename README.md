@@ -1,17 +1,31 @@
 # YJChart
-## Effect
+<div align="left">
 <img src="https://github.com/yuejieee/YJChart/blob/master/%E6%95%88%E6%9E%9C%E5%9B%BE.png" width=400 />
-
+</div>
+<div align="right">
+<img scr="" width=400 />
+</div>
 ## Description
 基于UIBezierPath的一个图表的封装，目前仅仅加入了折线图，以后有时间会陆续加上饼状图和柱状图。
 
 ## Usage
 
 ```
+// 折线图
+#import YJLineChart
+
 YJLineChart *lineChart = [YJLineChart new];
-    [self.view addSubview:lineChart];
-    lineChart.frame = CGRectMake(0, 50, self.view.frame.size.width, 300);
-    [lineChart setYLabels:@[@"50", @"100", @"150", @"200", @"250", @"300", @"350", @"400"]];
-    [lineChart setXLabels:@[@"1月", @"2月", @"3月", @"4月", @"5月", @"6月", @"7月", @"8月", @"9月", @"10月", @"11月", @"12月"]];
-    [lineChart setDataArray:@[@"120", @"240", @"230", @"190", @"150", @"200", @"230", @"400", @"350", @"340", @"360", @"330"]];
+[self.view addSubview:lineChart];
+lineChart.frame = CGRectMake(0, 50, self.view.frame.size.width, 300);
+[lineChart setYLabels:@[@"50", @"100", @"150", @"200", @"250", @"300", @"350", @"400"]];
+[lineChart setXLabels:@[@"1月", @"2月", @"3月", @"4月", @"5月", @"6月", @"7月", @"8月", @"9月", @"10月", @"11月", @"12月"]];
+[lineChart setDataArray:@[@"120", @"240", @"230", @"190", @"150", @"200", @"230", @"400", @"350", @"340", @"360", @"330"]];
+
+// 饼状图
+#import YJPieChart
+
+YJPieChart *pieChart = [YJPieChart new];
+    [self.view addSubview:pieChart];
+    pieChart.frame = CGRectMake(0, 350, self.view.frame.size.width, 300);
+    [pieChart setValueWithArray:@[@"1", @"2", @"4"]];
 ```

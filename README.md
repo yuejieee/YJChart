@@ -1,8 +1,7 @@
 # YJChart
-<div align="center">
+
 <img src="https://github.com/yuejieee/YJChart/blob/master/%E6%8A%98%E7%BA%BF%E5%9B%BE.png" width=350/>
 <img src ="https://github.com/yuejieee/YJChart/blob/master/%E9%A5%BC%E7%8A%B6%E5%9B%BE.png" width=350/>
-</div>
 
 ## Description
 基于UIBezierPath的一个图表的封装，目前加入了折线图和饼状图，以后有时间会加上柱状图。

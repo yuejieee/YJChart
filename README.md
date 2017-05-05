@@ -1,5 +1,6 @@
 # YJChart
 <img src="https://github.com/yuejieee/YJChart/blob/master/%E6%8A%98%E7%BA%BF%E5%9B%BE.png" width=400 />
+![avatar](https://github.com/yuejieee/YJChart/blob/master/%E9%A5%BC%E7%8A%B6%E5%9B%BE.png)
 <img scr="https://github.com/yuejieee/YJChart/blob/master/%E9%A5%BC%E7%8A%B6%E5%9B%BE.png" width=400 />
 
 ## Description

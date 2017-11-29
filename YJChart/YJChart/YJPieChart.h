@@ -10,8 +10,8 @@
 
 @interface YJPieChart : UIView
 
-- (void)setTitleWithArray:(NSArray *)array;
-
 - (void)setValueWithArray:(NSArray *)array;
+
+- (void)animation;
 
 @end

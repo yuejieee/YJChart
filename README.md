@@ -10,20 +10,14 @@
 
 ```
 // 折线图
-#import YJLineChart
-
-YJLineChart *lineChart = [YJLineChart new];
+YJLineChart *lineChart = [[YJLineChart alloc] initWithFrame:CGRectMake(0, 50, self.view.frame.size.width, 300)];
 [self.view addSubview:lineChart];
-lineChart.frame = CGRectMake(0, 50, self.view.frame.size.width, 300);
-[lineChart setYLabels:@[@"50", @"100", @"150", @"200", @"250", @"300", @"350", @"400"]];
-[lineChart setXLabels:@[@"1月", @"2月", @"3月", @"4月", @"5月", @"6月", @"7月", @"8月", @"9月", @"10月", @"11月", @"12月"]];
-[lineChart setDataArray:@[@"120", @"240", @"230", @"190", @"150", @"200", @"230", @"400", @"350", @"340", @"360", @"330"]];
-
+lineChart.xValueArray = @[@"1月", @"2月", @"3月", @"4月", @"5月", @"6月", @"7月", @"8月", @"9月", @"10月", @"11月", @"12月"];
+lineChart.yValueArray = @[@"50", @"100", @"150", @"200", @"250", @"300", @"350", @"400"];
+lineChart.dataArray = @[@"120", @"240", @"230", @"190", @"150", @"200", @"230", @"400", @"350", @"340", @"360", @"330"];
+    
 // 饼状图
-#import YJPieChart
-
-YJPieChart *pieChart = [YJPieChart new];
+YJPieChart *pieChart = [[YJPieChart alloc] initWithFrame:CGRectMake(0, 360, self.view.frame.size.width, 300)];
 [self.view addSubview:pieChart];
-pieChart.frame = CGRectMake(0, 350, self.view.frame.size.width, 300);
-[pieChart setValueWithArray:@[@"1", @"2", @"4"]];
+pieChart.valueArray = @[@"300", @"500", @"400", @"1000"];
 ```

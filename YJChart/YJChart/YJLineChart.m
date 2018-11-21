@@ -2,7 +2,7 @@
 //  YJLineChart.m
 //  YJChart
 //
-//  Created by Kingpin on 2017/4/18.
+//  Created by yuejieee on 2017/4/18.
 //  Copyright © 2017年 yuejieee. All rights reserved.
 //
 
@@ -10,6 +10,12 @@
 
 #define bounceX 30
 #define bounceY 50
+
+@interface YJLineChart ()
+
+@property (nonatomic, strong) CAShapeLayer *shapeLayer;
+
+@end
 
 @implementation YJLineChart
 
@@ -23,15 +29,17 @@
     CGContextStrokePath(context);
 }
 
-- (instancetype)init {
-    self = [super init];
+- (instancetype)initWithFrame:(CGRect)frame xValueArray:(NSArray *)xValueArray yValueArray:(NSArray *)yValueArray dataArray:(NSArray *)dataArray {
+    self = [super initWithFrame:frame];
     if (self) {
-        self.backgroundColor = [UIColor colorWithRed: 28/255.0 green: 207/255.0 blue: 155/255.0 alpha: 1.0];
+        _xValueArray = xValueArray;
+        _yValueArray = yValueArray;
+        _dataArray = dataArray;
     }
     return self;
 }
 
-- (void)setXValuesWithArray:(NSArray *)array {
+- (void)setXSubviewsWithArray:(NSArray *)array {
     CGFloat labelWidth = (self.bounds.size.width - bounceX * 2) / array.count;
     for (NSInteger i = 0; i < array.count; i++) {
         UILabel *label = [UILabel new];
@@ -46,7 +54,7 @@
     }
 }
 
-- (void)setYValuesWithArray:(NSArray *)array {
+- (void)setYSubviewsWithArray:(NSArray *)array {
     CGFloat yLineHeight = self.bounds.size.height - bounceY * 2;
     CGFloat labelHeight = yLineHeight / array.count;
     for (NSInteger i = 0; i < array.count; i++) {
@@ -77,14 +85,13 @@
     }
 }
 
-- (void)setDataArray:(NSArray *)array {
+- (void)setLineWithDataArray:(NSArray *)array {
+    self.backgroundColor = [UIColor colorWithRed: 28/255.0 green: 207/255.0 blue: 155/255.0 alpha: 1.0];
+    
     CGFloat maxValue = [[array valueForKeyPath:@"@max.floatValue"] floatValue];
     CGFloat yLineHeight = self.bounds.size.height - bounceY * 2;
     CGFloat labelWidth = self.bounds.size.width / array.count;
-    CAShapeLayer *shapeLayer = [CAShapeLayer layer];
-    shapeLayer.lineWidth = 2;
-    shapeLayer.strokeColor = [UIColor whiteColor].CGColor;
-    shapeLayer.fillColor = [UIColor whiteColor].CGColor;
+    
     UIBezierPath *path = [UIBezierPath new];
     [path setLineWidth:1];
     for (NSInteger i = 0; i < array.count; i++) {
@@ -112,10 +119,48 @@
         }
         UIBezierPath *circlePath = [UIBezierPath new];
         [circlePath addArcWithCenter:point radius:2 startAngle:M_PI endAngle:M_PI * 3 clockwise:YES];
+        [circlePath moveToPoint:point];
         [path appendPath:circlePath];
     }
-    shapeLayer.path = path.CGPath;
-    [self.layer addSublayer:shapeLayer];
+    
+    self.shapeLayer = [CAShapeLayer layer];
+    self.shapeLayer.lineWidth = 2;
+    self.shapeLayer.strokeColor = [UIColor whiteColor].CGColor;
+    self.shapeLayer.fillColor = [UIColor clearColor].CGColor;
+    
+    self.shapeLayer.path = path.CGPath;
+    [self.layer addSublayer:self.shapeLayer];
+    [self animation];
+}
+
+- (void)animation {
+    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
+    animation.duration  = 3;
+    animation.fromValue = @0.0f;
+    animation.toValue   = @1.0f;
+    animation.removedOnCompletion = YES;
+    [self.shapeLayer addAnimation:animation forKey:@"strokeEnd"];
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [self animation];
+}
+
+#pragma mark - setter
+
+- (void)setXValueArray:(NSArray *)xValueArray {
+    _xValueArray = xValueArray;
+    [self setXSubviewsWithArray:xValueArray];
+}
+
+- (void)setYValueArray:(NSArray *)yValueArray {
+    _yValueArray = yValueArray;
+    [self setYSubviewsWithArray:yValueArray];
+}
+
+- (void)setDataArray:(NSArray *)dataArray {
+    _dataArray = dataArray;
+    [self setLineWithDataArray:dataArray];
 }
 
 @end

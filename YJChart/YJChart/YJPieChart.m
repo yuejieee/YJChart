@@ -16,19 +16,16 @@
 
 @implementation YJPieChart
 
-- (instancetype)initWithFrame:(CGRect)frame {
+- (instancetype)initWithFrame:(CGRect)frame valueArray:(NSArray *)array {
     self = [super initWithFrame:frame];
     if (self) {
-        self.backgroundColor = [UIColor whiteColor];
+        self.valueArray = array;
     }
     return self;
 }
 
-- (void)setValueWithArray:(NSArray *)array {
-    CGFloat sum = 0;
-    for (NSString *value in array) {
-        sum += [value floatValue];
-    }
+- (void)setupSubviewsWithArray:(NSArray *)array {
+    self.backgroundColor = [UIColor whiteColor];
     
     CGPoint centerPoint = CGPointMake(self.bounds.size.width / 2, self.bounds.size.height / 2);
     CGFloat circleRadius = centerPoint.x < centerPoint.y ? centerPoint.x : centerPoint.y;
@@ -46,10 +43,15 @@
     self.bgLayer.strokeStart = 0.0f;
     self.bgLayer.strokeEnd = 1.0f;
     // 可根据控制lineWidth来实现实心圆或者空心圆
-    self.bgLayer.lineWidth = circleRadius * 2;
+    self.bgLayer.lineWidth = circleRadius / 2;
     self.bgLayer.path = bgPath.CGPath;
+    self.layer.mask = self.bgLayer;
     
     // 主体
+    CGFloat sum = 0;
+    for (NSString *value in array) {
+        sum += [value floatValue];
+    }
     CGFloat startAngle = - M_PI_2;
     CGFloat endAngle = 0;
     for (NSString *value in array) {
@@ -67,16 +69,28 @@
     }
     
     self.layer.mask = self.bgLayer;
+    [self animation];
 }
 
 - (void)animation {
     CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
-    animation.duration  = 5;
+    animation.duration  = 3;
     animation.fromValue = @0.0f;
     animation.toValue   = @1.0f;
     animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
     animation.removedOnCompletion = YES;
     [self.bgLayer addAnimation:animation forKey:@"circleAnimation"];
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [self animation];
+}
+
+#pragma mark - setter
+
+- (void)setValueArray:(NSArray *)valueArray {
+    _valueArray = valueArray;
+    [self setupSubviewsWithArray:valueArray];
 }
 
 @end

@@ -2,7 +2,7 @@
 //  ViewController.h
 //  YJChart
 //
-//  Created by Kingpin on 2017/4/18.
+//  Created by yuejieee on 2017/4/18.
 //  Copyright © 2017年 yuejieee. All rights reserved.
 //
 
